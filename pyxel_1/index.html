@@ -812,12 +812,16 @@
 <li>Modifie-le de manière à déplacer le rectangle rempli vers la droite de l'écran.</li>
 <li>Modifie le programme pour obtenir une ligne verticale au lieu d'horizontale</li>
 <li>Dessine une ligne oblique en travers de l'écran.</li>
-<li>En utilisant une boucle, réaliser le dessin suivant:</li>
+<li>En utilisant une boucle, réaliser les dessins suivants:</li>
 </ol>
-<p><img alt="Ecran" src="../img/pyxel_1_1.png" width="350" /></p>
+<p><img alt="Ecran" src="../img/pyxel_1_1.png" width="350" />
+<img alt="Ecran" src="../img/pyxel_1_3.png" width="350" /></p>
 <h2 id="premieres-animations">Premières animations</h2>
-<p><img alt="Animation" src="../img/pyxel_1_2.gif" width="350" /></p>
+<p><img alt="Animation" src="../img/pyxel_1_2.gif" width="350" />
+<img alt="Animation" src="../img/pyxel_1_4.gif" width="350" /></p>
 <h3 id="deplacement-dun-rectangle-avec-rebond">Déplacement d'un rectangle avec rebond</h3>
+<details class="warning">
+<summary>Code</summary>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python3</span>
 <span class="kn">import</span> <span class="nn">pyxel</span>
 <span class="n">pyxel</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span><span class="mi">128</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Rectangle&quot;</span><span class="p">)</span>
@@ -843,6 +847,22 @@
 <span class="n">hauteur</span> <span class="o">=</span> <span class="mi">8</span> 
 <span class="n">vx</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">vy</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">pyxel</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">update</span><span class="p">,</span> <span class="n">draw</span><span class="p">)</span> <span class="c1">#Appel en boucle les fonctions update et draw</span>
+</code></pre></div>
+</details>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pyxel</span>
+<span class="n">pyxel</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span><span class="mi">128</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Rectangle&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+<span class="k">global</span> <span class="n">rayon</span>
+<span class="k">if</span> <span class="n">rayon</span><span class="o">&lt;</span><span class="mi">128</span><span class="p">:</span>
+<span class="n">rayon</span><span class="o">+=</span><span class="mi">1</span>
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+<span class="n">pyxel</span><span class="o">.</span><span class="n">cls</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">pyxel</span><span class="o">.</span><span class="n">circb</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span><span class="mi">64</span><span class="p">,</span><span class="n">rayon</span><span class="p">,</span><span class="n">rayon</span><span class="o">%</span><span class="mi">16</span><span class="p">)</span> 
+<span class="c1">#Programme Principal</span>
+<span class="c1"># Initialisation des variables </span>
+<span class="n">rayon</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">pyxel</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">update</span><span class="p">,</span> <span class="n">draw</span><span class="p">)</span> <span class="c1">#Appel en boucle les fonctions update et draw</span>
 </code></pre></div>
 <details class="warning">
