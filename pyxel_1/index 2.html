@@ -247,8 +247,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#structure-du-programme" class="md-nav__link">
-    Structure du programme
+  <a href="#structure-du-programme-minimal" class="md-nav__link">
+    Structure du programme minimal
   </a>
   
 </li>
@@ -282,6 +282,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#travail" class="md-nav__link">
+    Travail
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#les-autres-formes" class="md-nav__link">
     Les autres  formes
   </a>
@@ -297,7 +304,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#travail" class="md-nav__link">
+  <a href="#travail_1" class="md-nav__link">
     Travail
   </a>
   
@@ -305,6 +312,13 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defis" class="md-nav__link">
+    Défis
+  </a>
   
 </li>
         
@@ -323,7 +337,21 @@
         
           <li class="md-nav__item">
   <a href="#comment-animer" class="md-nav__link">
-    Comment  Animer
+    Comment  Animer ?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple" class="md-nav__link">
+    Exemple
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defis_1" class="md-nav__link">
+    Défis
   </a>
   
 </li>
@@ -667,8 +695,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#structure-du-programme" class="md-nav__link">
-    Structure du programme
+  <a href="#structure-du-programme-minimal" class="md-nav__link">
+    Structure du programme minimal
   </a>
   
 </li>
@@ -702,6 +730,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#travail" class="md-nav__link">
+    Travail
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#les-autres-formes" class="md-nav__link">
     Les autres  formes
   </a>
@@ -717,7 +752,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#travail" class="md-nav__link">
+  <a href="#travail_1" class="md-nav__link">
     Travail
   </a>
   
@@ -725,6 +760,13 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defis" class="md-nav__link">
+    Défis
+  </a>
   
 </li>
         
@@ -743,7 +785,21 @@
         
           <li class="md-nav__item">
   <a href="#comment-animer" class="md-nav__link">
-    Comment  Animer
+    Comment  Animer ?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple" class="md-nav__link">
+    Exemple
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defis_1" class="md-nav__link">
+    Défis
   </a>
   
 </li>
@@ -779,13 +835,28 @@
 <p>L'écran de jeu est un ensemble de pixels. Chaque pixel est localisé sur l'écran par 2 coordonnées: x et y. </p>
 <p><img alt="Repère" src="../img/pyxel_1_0.png" width="350" /></p>
 <p>L'écran a pour résolution 128 pixels horizontalement et 128 pixels verticalement</p>
-<h2 id="structure-du-programme">Structure du programme</h2>
+<h2 id="structure-du-programme-minimal">Structure du programme minimal</h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pyxel</span>
+<span class="c1"># création de la fenetre 128x128 pixels</span>
+<span class="n">pyxel</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Mon jeu&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+<span class="sd">&quot;&quot;&quot;mise à jour des variables (30 fois par seconde)&quot;&quot;&quot;</span>
+<span class="k">pass</span>
+
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+<span class="c1"># Efface l&#39;écran</span>
+<span class="n">pyxel</span><span class="o">.</span><span class="n">cls</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">pyxel</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">update</span><span class="p">,</span> <span class="n">draw</span><span class="p">)</span>
+</code></pre></div>
 <p>Le programme est structuré en trois parties</p>
 <ol>
 <li>Le début du programme qui importe le module pyxel (et d'autres si nécessaires)</li>
 <li>La fonction <code>update()</code> qui exécute des calculs et instructions avant l'affichage.</li>
 <li>La fonction <code>draw()</code> c'est elle qui contient les instructions réalisant l'affichage des objets à l'écran.</li>
 </ol>
+<p>En pratique, on écrira du code dans les fonctions <code>update</code>et <code>draw</code>.</p>
 <h2 id="premiers-dessins">Premiers dessins</h2>
 <h3 id="afficher-un-pixel">Afficher un pixel</h3>
 <p><strong>Objectif</strong> Afficher un pixel au centre de l'écran.</p>
@@ -795,23 +866,24 @@
 </ul>
 <h4 id="code">Code</h4>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pyxel</span>
-<span class="c1"># création de la fenetre 128x128 pixels</span>
 <span class="n">pyxel</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Mon jeu&quot;</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
- <span class="sd">&quot;&quot;&quot;mise à jour des variables (30 fois par seconde)&quot;&quot;&quot;</span>
     <span class="k">pass</span>
 
 <span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
- <span class="c1"># Efface l&#39;écran</span>
-    <span class="n">pyxel</span><span class="o">.</span><span class="n">cls</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
  <span class="c1"># Affiche un pixel de couleur 10=jaune</span>
-    <span class="n">pyxel</span><span class="o">.</span><span class="n">pset</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="n">pyxel</span><span class="o">.</span><span class="n">pset</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 
 <span class="n">pyxel</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">update</span><span class="p">,</span> <span class="n">draw</span><span class="p">)</span>
 </code></pre></div>
+<h3 id="travail">Travail</h3>
+<ol>
+<li>Modifier le code précédent de manière à ce que le pixel soit au centre de l'écran. </li>
+<li>Ajouter une ligne de code, pour afficher un autre pixel à l'écran.</li>
+</ol>
 <h3 id="les-autres-formes">Les autres  formes</h3>
-<p>Il existe de nombreuses instructions permettant de dessiner. Elles sont à placer dans la fonction <code>draw</code>. Les formes sont dessinées dans l'ordre des instructions.</p>
+<p>Il existe de nombreuses instructions permettant de dessiner. Elles sont à placer dans la fonction <code>draw()</code>. Les formes sont dessinées dans l'ordre d'écriture des instructions.</p>
 <h4 id="code_1">Code</h4>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pyxel</span>
 <span class="n">pyxel</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span><span class="mi">128</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Rectangle&quot;</span><span class="p">)</span>
@@ -820,9 +892,7 @@
     <span class="k">pass</span>
 
 <span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
-    <span class="c1"># Efface l&#39;écran</span>
     <span class="n">pyxel</span><span class="o">.</span><span class="n">cls</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-    <span class="c1"># dessine un pixel au milieu de l&#39;écran</span>
     <span class="c1"># Relie le point (0,64) avec le point (128,64)</span>
     <span class="n">pyxel</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">64</span><span class="p">,</span><span class="mi">128</span><span class="p">,</span><span class="mi">64</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span> 
     <span class="c1"># dessine un rectangle dont le coin est en (20,20) </span>
@@ -830,29 +900,53 @@
     <span class="c1"># couleur 2</span>
     <span class="n">pyxel</span><span class="o">.</span><span class="n">rect</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> 
     <span class="c1"># un rectangle non rempli</span>
-    <span class="n">pyxel</span><span class="o">.</span><span class="n">rectb</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">84</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> 
+    <span class="n">pyxel</span><span class="o">.</span><span class="n">rectb</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">84</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> 
 
 <span class="n">pyxel</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">update</span><span class="p">,</span> <span class="n">draw</span><span class="p">)</span>
 </code></pre></div>
-<h4 id="travail">Travail</h4>
+<h4 id="travail_1">Travail</h4>
 <ol>
 <li>Recopie le code ci-dessus.</li>
-<li>Modifie-le de manière à déplacer le rectangle rempli vers la droite de l'écran.</li>
+<li>Modifie de manière à déplacer le rectangle rempli vers la droite de l'écran.</li>
 <li>Modifie le programme pour obtenir une ligne verticale au lieu d'horizontale</li>
-<li>Dessine une ligne oblique en travers de l'écran.</li>
-<li>En utilisant une boucle, réaliser les dessins suivants:</li>
+<li>Ajoute une ligne oblique en travers de l'écran.</li>
 </ol>
+<h3 id="defis">Défis</h3>
+<p>En utilisant une boucle, réaliser les dessins suivants:</p>
 <p><img alt="Ecran" src="../img/pyxel_1_1.png" width="350" />
 <img alt="Ecran" src="../img/pyxel_1_3.png" width="350" /></p>
 <h2 id="premieres-animations">Premières animations</h2>
-<h3 id="comment-animer">Comment  Animer</h3>
+<h3 id="comment-animer">Comment  Animer ?</h3>
+<p>Comme pour un dessin animé, on affiche une succession d'images fixes. La stratégie est:</p>
 <ol>
-<li>On modifie la valeur de variables dont dépend l'affichage.<ol>
-<li>Par exemple en modifiant les coordonnées d'un point d'une ligne</li>
-<li>Ces modifications sont à faire dans la fonction <code>update()</code></li>
+<li>Dans <code>update()</code>, on modifie les valeurs des variables dont dépend l'affichage.</li>
+<li>Dans <code>affichage()</code> on place toutes les instructions qui réalisent les dessins.  </li>
 </ol>
-</li>
+<h3 id="exemple">Exemple</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pyxel</span>
+<span class="n">pyxel</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span><span class="mi">128</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Rectangle&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">position_x</span>
+    <span class="k">if</span> <span class="n">position_x</span> <span class="o">&gt;</span><span class="mi">128</span><span class="p">:</span>
+        <span class="n">position_x</span><span class="o">=</span><span class="mi">0</span>
+    <span class="n">position_x</span> <span class="o">=</span> <span class="n">position_x</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+    <span class="n">pyxel</span><span class="o">.</span><span class="n">cls</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">pyxel</span><span class="o">.</span><span class="n">rect</span><span class="p">(</span><span class="n">position_x</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">position_x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">pyxel</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">update</span><span class="p">,</span> <span class="n">draw</span><span class="p">)</span>
+</code></pre></div>
+<ol>
+<li>Que représente la variable: <code>position_x</code> ?</li>
+<li>Que permet la ligne <code>position_x = position_x + 1</code> ?</li>
+<li>Pourquoi faire un test conditionnel dans la fonction <code>update()</code> ?</li>
+<li>Que permet l'instruction <code>global</code> ? Aurait-on pu faire autrement ?</li>
 </ol>
+<h3 id="defis_1">Défis</h3>
+<p>Réalise les animations suivantes: </p>
 <p><img alt="Animation" src="../img/pyxel_1_2.gif" width="350" />
 <img alt="Animation" src="../img/pyxel_1_4.gif" width="350" /></p>
 <h3 id="deplacement-dun-rectangle-avec-rebond">Déplacement d'un rectangle avec rebond</h3>

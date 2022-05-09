@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#documentation-pour-desssiner" class="md-skip">
+        <a href="#programme-minimal" class="md-skip">
           Skip to content
         </a>
       
@@ -540,6 +540,21 @@
                 
 
 
+<h1 id="programme-minimal">Programme minimal</h1>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pyxel</span>
+<span class="c1"># création de la fenetre 128x128 pixels</span>
+<span class="n">pyxel</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Mon jeu&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+<span class="sd">&quot;&quot;&quot;mise à jour des variables (30 fois par seconde)&quot;&quot;&quot;</span>
+<span class="k">pass</span>
+
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+<span class="c1"># Efface l&#39;écran</span>
+<span class="n">pyxel</span><span class="o">.</span><span class="n">cls</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">pyxel</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">update</span><span class="p">,</span> <span class="n">draw</span><span class="p">)</span>
+</code></pre></div>
 <h1 id="documentation-pour-desssiner">Documentation pour desssiner</h1>
 <ul>
 <li>
@@ -587,6 +602,8 @@ Dessine les contours d’un triangle avec les sommets (<code>x1</code>, <code>y1
 Dessine une ellipse de largeur <code>w</code>, de hauteur <code>h</code> et de couleur <code>col</code> à partir de (<code>x</code>, <code>y</code>).</p>
 </li>
 </ul>
+<h1 id="feuille-de-triche-python">Feuille de "triche" Python</h1>
+<p><a href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf">Anti-sèche</a></p>
 
               
             </article>
