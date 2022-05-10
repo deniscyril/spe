@@ -279,6 +279,46 @@
     Déplacement d'un rectangle avec rebond
   </a>
   
+    <nav class="md-nav" aria-label="Déplacement d'un rectangle avec rebond">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explications" class="md-nav__link">
+    Explications
+  </a>
+  
+    <nav class="md-nav" aria-label="Explications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deplacement" class="md-nav__link">
+    Déplacement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rebond" class="md-nav__link">
+    Rebond
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defi-ultime" class="md-nav__link">
+    Défi ultime !
+  </a>
+  
 </li>
       
     </ul>
@@ -626,6 +666,46 @@
     Déplacement d'un rectangle avec rebond
   </a>
   
+    <nav class="md-nav" aria-label="Déplacement d'un rectangle avec rebond">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explications" class="md-nav__link">
+    Explications
+  </a>
+  
+    <nav class="md-nav" aria-label="Explications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deplacement" class="md-nav__link">
+    Déplacement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rebond" class="md-nav__link">
+    Rebond
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defi-ultime" class="md-nav__link">
+    Défi ultime !
+  </a>
+  
 </li>
       
     </ul>
@@ -666,7 +746,7 @@
 <span class="n">position_x</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">pyxel</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">update</span><span class="p">,</span> <span class="n">draw</span><span class="p">)</span>
 </code></pre></div>
-<div class="admonition tips">
+<div class="admonition note">
 <p class="admonition-title">Travail</p>
 <ol>
 <li>Que représente la variable: <code>position_x</code> ?</li>
@@ -679,39 +759,18 @@
 <p><img alt="Animation" src="../img/pyxel_2_1.gif" width="350" /></p>
 <h2 id="defis">Défis</h2>
 <p>Réalise les animations suivantes: </p>
-<p><img alt="Animation" src="../img/pyxel_1_2.gif" width="350" />
-<img alt="Animation" src="../img/pyxel_1_4.gif" width="350" /></p>
-<h2 id="deplacement-dun-rectangle-avec-rebond">Déplacement d'un rectangle avec rebond</h2>
-<details class="warning">
-<summary>Code</summary>
-<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python3</span>
-<span class="kn">import</span> <span class="nn">pyxel</span>
-<span class="n">pyxel</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span><span class="mi">128</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Rectangle&quot;</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
-<span class="k">global</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">vx</span><span class="p">,</span><span class="n">vy</span>
-<span class="k">if</span> <span class="n">x</span><span class="o">&gt;</span><span class="mi">128</span> <span class="ow">or</span> <span class="n">x</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
-<span class="n">vx</span> <span class="o">=</span> <span class="o">-</span><span class="n">vx</span>
-<span class="k">if</span> <span class="n">y</span><span class="o">&gt;</span><span class="mi">128</span> <span class="ow">or</span> <span class="n">y</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
-<span class="n">vy</span> <span class="o">=</span> <span class="o">-</span><span class="n">vy</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span> <span class="n">vx</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="o">+</span> <span class="n">vy</span>
-
-
-<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
-<span class="n">pyxel</span><span class="o">.</span><span class="n">cls</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
-<span class="n">pyxel</span><span class="o">.</span><span class="n">rect</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">largeur</span><span class="p">,</span><span class="n">hauteur</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-<span class="c1">#Programme Principal</span>
-<span class="c1"># Initialisation des variables </span>
-<span class="n">x</span> <span class="o">=</span> <span class="mi">60</span>
-<span class="n">y</span><span class="o">=</span> <span class="mi">30</span>
-<span class="n">largeur</span> <span class="o">=</span> <span class="mi">12</span>
-<span class="n">hauteur</span> <span class="o">=</span> <span class="mi">8</span> 
-<span class="n">vx</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">vy</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">pyxel</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">update</span><span class="p">,</span> <span class="n">draw</span><span class="p">)</span> <span class="c1">#Appel en boucle les fonctions update et draw</span>
-</code></pre></div>
+<details class="info">
+<summary>Aide</summary>
+<ol>
+<li>Reprendre le code des défis du tuto 1. </li>
+<li>Observer et trouver le paramètre qui varie.</li>
+<li>Créer une variable utiliser dans <code>draw</code> que l'on modifie dans <code>update</code></li>
+</ol>
 </details>
+<p><img alt="Animation" src="../img/pyxel_1_4.gif" width="350" /></p>
+<p><img alt="Animation" src="../img/pyxel_1_2.gif" width="350" /></p>
+<details class="warning">
+<summary>Correction défi 1</summary>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pyxel</span>
 <span class="n">pyxel</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span><span class="mi">128</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Rectangle&quot;</span><span class="p">)</span>
 
@@ -727,8 +786,9 @@
 <span class="n">rayon</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">pyxel</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">update</span><span class="p">,</span> <span class="n">draw</span><span class="p">)</span> <span class="c1">#Appel en boucle les fonctions update et draw</span>
 </code></pre></div>
+</details>
 <details class="warning">
-<summary>Correction</summary>
+<summary>Correction défi 2</summary>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pyxel</span>
 <span class="n">pyxel</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span><span class="mi">128</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Rectangle&quot;</span><span class="p">)</span>
 
@@ -751,6 +811,77 @@
 <span class="n">pyxel</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">update</span><span class="p">,</span> <span class="n">draw</span><span class="p">)</span> <span class="c1">#Appel en boucle les fonctions update et draw</span>
 </code></pre></div>
 </details>
+<h2 id="deplacement-dun-rectangle-avec-rebond">Déplacement d'un rectangle avec rebond</h2>
+<h3 id="explications">Explications</h3>
+<h4 id="deplacement">Déplacement</h4>
+<ul>
+<li>La position du rectangle est défini par deux variables x et y.</li>
+<li>Avant d'afficher une nouvelle image, on modifie la valeur de x et y dans la fonction <code>update</code>. </li>
+<li><code>x=x+vx</code> augmente la position horizontale d'une quantité valant <code>vx</code>. <code>vx</code> est la vitesse horizontale. </li>
+</ul>
+<h4 id="rebond">Rebond</h4>
+<ul>
+<li>Si la position horizontale déplace les limites inférieures (x&lt;0) ou supérieures de l'écran (x&gt;128) alors on inverse la vitesse. </li>
+</ul>
+<p>Par exemple: si l'objet se déplace à droite (<code>vx=1</code>) et qu'il sort de l'écran (<code>x&gt;128</code>) alors <code>vx= -vx</code> c'est à dire <code>vx=-1</code>. Ainsi les prochaines valeurs de <code>x</code> seront décrémentées (<code>x=x+vx</code> c'est à dire <code>x=x-1</code>). L'objet se déplacera vers la gauche.</p>
+<div class="admonition note">
+<p class="admonition-title">Travail</p>
+<ol>
+<li>Repère la ligne qui dessine le rectangle. Quelles sont ses dimensions ?</li>
+<li>Identifie dans le programme ci-dessous les lignes qui permettent le déplacement du rectangle.</li>
+<li>A partir des deux fonctions complétées, écris un programme qui anime un rectangle qui se déplace à l'écran en rebondissant sur les bords.</li>
+</ol>
+</div>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">vx</span><span class="p">,</span><span class="n">vy</span>
+    <span class="k">if</span> <span class="n">x</span><span class="o">&gt;...</span><span class="n">à</span> <span class="n">compléter</span> <span class="ow">or</span> <span class="n">x</span><span class="o">&lt;...</span><span class="n">à</span> <span class="n">compléter</span><span class="o">...</span> <span class="p">:</span>
+        <span class="n">vx</span> <span class="o">=</span> <span class="o">-</span><span class="n">vx</span>
+    <span class="k">if</span> <span class="n">y</span> <span class="o">...</span> <span class="n">à</span> <span class="n">compléter</span> <span class="o">....</span> <span class="p">:</span>
+        <span class="n">vy</span> <span class="o">=</span> <span class="o">-</span><span class="n">vy</span>
+<span class="c1"># Calcul de la nouvelle position</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span> <span class="n">vx</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="o">+</span> <span class="o">...</span><span class="n">à</span> <span class="n">compléter</span><span class="o">...</span>
+
+
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+    <span class="n">pyxel</span><span class="o">.</span><span class="n">cls</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+    <span class="n">pyxel</span><span class="o">.</span><span class="n">rect</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">largeur</span><span class="p">,</span><span class="n">hauteur</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+<details class="warning">
+<summary>Correction à ne regarder qu'après avoir vraiment chercher</summary>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python3</span>
+<span class="kn">import</span> <span class="nn">pyxel</span>
+<span class="n">pyxel</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span><span class="mi">128</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Rectangle&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">vx</span><span class="p">,</span><span class="n">vy</span>
+    <span class="k">if</span> <span class="n">x</span><span class="o">&gt;</span><span class="mi">128</span> <span class="ow">or</span> <span class="n">x</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
+        <span class="n">vx</span> <span class="o">=</span> <span class="o">-</span><span class="n">vx</span>
+    <span class="k">if</span> <span class="n">y</span><span class="o">&gt;</span><span class="mi">128</span> <span class="ow">or</span> <span class="n">y</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
+        <span class="n">vy</span> <span class="o">=</span> <span class="o">-</span><span class="n">vy</span>
+    <span class="c1"># Calcul de la nouvelle position</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span> <span class="n">vx</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="o">+</span> <span class="n">vy</span>
+
+
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+    <span class="n">pyxel</span><span class="o">.</span><span class="n">cls</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+    <span class="n">pyxel</span><span class="o">.</span><span class="n">rect</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">largeur</span><span class="p">,</span><span class="n">hauteur</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1">#Programme Principal</span>
+<span class="c1"># Initialisation des variables </span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">60</span>
+<span class="n">y</span><span class="o">=</span> <span class="mi">30</span>
+<span class="n">largeur</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">hauteur</span> <span class="o">=</span> <span class="mi">8</span> 
+<span class="n">vx</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">vy</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="n">pyxel</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">update</span><span class="p">,</span> <span class="n">draw</span><span class="p">)</span> <span class="c1">#Appel en boucle les fonctions update et draw</span>
+</code></pre></div>
+</details>
+<h2 id="defi-ultime">Défi ultime !</h2>
+<p>En utilisant les défis précédents, réalisez l'animation suivante:</p>
 
               
             </article>
