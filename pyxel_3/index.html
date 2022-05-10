@@ -301,6 +301,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#facultatif-on-bidouille-avec-framecount" class="md-nav__link">
+    Facultatif: on bidouille avec frame.count
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -654,6 +661,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#facultatif-on-bidouille-avec-framecount" class="md-nav__link">
+    Facultatif: on bidouille avec frame.count
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -739,6 +753,23 @@
 </details>
 <h2 id="defi-ultime">Défi ultime !</h2>
 <p>En utilisant les défis précédents, réalisez l'animation suivante:</p>
+<h2 id="facultatif-on-bidouille-avec-framecount">Facultatif: on bidouille avec frame.count</h2>
+<ul>
+<li>Etudier la fonction <code>draw()</code> suivante. La fonction <code>update()</code> peut rester vide.</li>
+<li>Réfléchissez à l'instruction <code>frame.count</code> </li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sin</span>
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+<span class="c1"># vide la fenetre</span>
+    <span class="n">pyxel</span><span class="o">.</span><span class="n">cls</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">lsin</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="n">pyxel</span><span class="o">.</span><span class="n">frame_count</span> <span class="o">/</span> <span class="mi">20</span> <span class="o">+</span><span class="n">i</span> <span class="o">/</span><span class="mi">4</span><span class="p">)</span><span class="o">*</span><span class="mi">50</span>
+    <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">):</span>
+    <span class="n">pyxel</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">68</span><span class="o">+</span><span class="n">l</span> <span class="o">+</span> <span class="n">lsin</span><span class="p">,</span><span class="mi">128</span><span class="p">,</span><span class="mi">68</span><span class="o">+</span><span class="n">l</span><span class="o">+</span><span class="n">lsin</span><span class="p">,</span><span class="n">l</span><span class="o">+</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">pyxel</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">128</span><span class="o">-</span><span class="n">pyxel</span><span class="o">.</span><span class="n">frame_count</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Animation de lignes. Prise en main de Pyxel en NSI .... &quot;</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span><span class="mi">6</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="Animation" src="../img/pyxel_3_0.gif" width="350" /></p>
 
               
             </article>
