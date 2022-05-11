@@ -788,6 +788,52 @@
 <h2 id="defi">Défi</h2>
 <p>En utilisant ce que tu as appris, écris un jeu de casse brique sans les briques. Une raquette peut être déplacée horizontalement à l'aide du clavier. Une balle rebondit sur les côtés de l'écran et sur la raquette. </p>
 <p>Si la balle tombe en bas de l'écran sans toucher la raquette le joueur a perdu.</p>
+<p><img alt="editeur" src="../img/pyxel_4_1.gif" width="350" /></p>
+<details class="note">
+<summary>A regarder le plus tard possible..</summary>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pyxel</span>
+<span class="n">pyxel</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Nuit du c0de&quot;</span><span class="p">)</span>
+<span class="n">pyxel</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;/Users/cyrildenis/Desktop/mes_graphismes.pyres.pyxres&quot;</span><span class="p">)</span>
+<span class="c1"># Initialisation position raquette</span>
+<span class="n">raquette_x</span> <span class="o">=</span> <span class="mi">60</span>
+<span class="c1"># Initialisation de la balle</span>
+<span class="n">balle_x</span><span class="p">,</span><span class="n">balle_y</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span><span class="mi">50</span>
+<span class="n">vx</span><span class="p">,</span><span class="n">vy</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span>
+
+<span class="k">def</span> <span class="nf">deplacement_balle</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">vx</span><span class="p">,</span><span class="n">vy</span><span class="p">,</span><span class="n">balle_y</span><span class="p">,</span><span class="n">balle_x</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">128</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span><span class="mi">0</span><span class="p">):</span>
+        <span class="n">vx</span><span class="o">=-</span><span class="n">vx</span>
+    <span class="k">if</span> <span class="n">y</span><span class="o">&lt;</span><span class="mi">4</span><span class="p">:</span> <span class="c1">#si la balle tappe le haut de l&#39;écran</span>
+        <span class="n">vy</span><span class="o">=-</span><span class="n">vy</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">y</span> <span class="o">&gt;=</span><span class="mi">126</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">raquette_x</span> <span class="o">-</span> <span class="mi">3</span> <span class="o">&lt;=</span> <span class="n">x</span> <span class="o">&lt;=</span><span class="n">raquette_x</span> <span class="o">+</span> <span class="mi">16</span><span class="p">):</span>
+    <span class="c1"># si la balle et en bas et dans l&#39;intervalle où la raquette est là</span>
+        <span class="n">vy</span><span class="o">=-</span><span class="n">vy</span>
+    <span class="c1"># actualise la position de la balle </span>
+    <span class="n">balle_x</span><span class="p">,</span><span class="n">balle_y</span> <span class="o">=</span> <span class="n">balle_x</span><span class="o">+</span><span class="n">vx</span><span class="p">,</span> <span class="n">balle_y</span><span class="o">+</span><span class="n">vy</span>
+
+<span class="k">def</span> <span class="nf">deplacement_raquette</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;déplacement avec les touches de directions&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">pyxel</span><span class="o">.</span><span class="n">btn</span><span class="p">(</span><span class="n">pyxel</span><span class="o">.</span><span class="n">KEY_RIGHT</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">128</span><span class="o">-</span><span class="mi">16</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
+    <span class="k">if</span> <span class="n">pyxel</span><span class="o">.</span><span class="n">btn</span><span class="p">(</span><span class="n">pyxel</span><span class="o">.</span><span class="n">KEY_LEFT</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="n">x</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">raquette_x</span>
+    <span class="c1"># mise à jour de la position du vaisseau</span>
+    <span class="n">raquette_x</span> <span class="o">=</span> <span class="n">deplacement_raquette</span><span class="p">(</span><span class="n">raquette_x</span><span class="p">)</span>
+    <span class="n">deplacement_balle</span><span class="p">(</span><span class="n">balle_x</span><span class="p">,</span> <span class="n">balle_y</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+    <span class="c1"># vide la fenetre</span>
+    <span class="n">pyxel</span><span class="o">.</span><span class="n">cls</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">pyxel</span><span class="o">.</span><span class="n">rect</span><span class="p">(</span><span class="n">balle_x</span><span class="p">,</span><span class="n">balle_y</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+    <span class="n">pyxel</span><span class="o">.</span><span class="n">blt</span><span class="p">(</span><span class="n">raquette_x</span><span class="p">,</span><span class="mi">125</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">pyxel</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">update</span><span class="p">,</span> <span class="n">draw</span><span class="p">)</span>
+</code></pre></div>
+</details>
 
               
             </article>
