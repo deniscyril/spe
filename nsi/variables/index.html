@@ -610,7 +610,7 @@
 </code></pre></div>
 </td></tr></table>
 <ul>
-<li>Explication: <ol>
+<li>Explications: <ol>
 <li>le nombre décimal 3,14 est enregistré dans la variable nombre_pi. On dit que la variable <code>nombre_pi</code> est du type flottant ou <code>float</code>.</li>
 <li>La <strong>chaine de caractères</strong> "Cuicui" est enregistée dans la variable <code>tweet</code>. On dit que la variable <code>tweet</code> est du type <strong>String</strong>.</li>
 <li>La variable faim contient une valeur <strong>booléenne</strong>. Il s'agit d'une valeur qui vaut soit vrai soit faux. En python cela s'écrit soit <code>True</code> soit <code>False</code>. Le type de cette variable est <strong>bool</strong></li>
@@ -618,6 +618,30 @@
 </li>
 </ul>
 </div>
+<h1 id="activite-1-float-et-int">Activité 1: float et int</h1>
+<p>Dans une console Python, saisir les instructions suivantes et observer:</p>
+<div class="highlight"><span class="filename">En mode console</span><pre><span></span><code><span class="n">nombre_entier</span> <span class="o">=</span> <span class="mi">3</span> 
+<span class="n">nombre_flottant</span> <span class="o">=</span> <span class="mf">3.14</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">nombre_entier</span><span class="p">)</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">nombre_flottant</span><span class="p">)</span>
+<span class="n">double</span> <span class="o">=</span> <span class="n">nombre_entier</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="n">somme</span> <span class="o">=</span> <span class="n">nombre_entier</span> <span class="o">+</span> <span class="n">nombre_flottant</span>
+<span class="n">double</span>
+<span class="n">somme</span>
+</code></pre></div>
+<ol>
+<li>Quel est le type de la variable <code>double</code>. Vérifie en utilisant l'instruction <code>type(double)</code>.</li>
+<li>Quel est le type de la variable <code>somme</code>. </li>
+<li>Quelle est l'erreur commise par Python lors du calcul de la somme ? Propose une explication.</li>
+</ol>
+<details class="warning">
+<summary>Correction - Activité 1</summary>
+<ol>
+<li>double est une variable de type flottant: python renvoie <code>float</code> après exécution de <code>type(double)</code> dans la console.</li>
+<li>Lorsque l'on addition un float avec un int le résultat doit pouvoir contenir la partir décimal du float. C'est pourquoi somme est du type float.</li>
+<li>Python affiche que 6 + 3.14 = 6.140000000000001, il commet une erreur de 0.000000000000001. C'est peu mais c'est une erreur qui risque de se cumuler avec d'autres par la suite. Seul les nombres entiers sont exacts en python.</li>
+</ol>
+</details>
 
               
             </article>
