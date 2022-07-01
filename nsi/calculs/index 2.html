@@ -13,7 +13,7 @@
     
     
       
-        <title>Chaînes - Enseignements de Spécialité de M.DENIS</title>
+        <title>Calculs - Enseignements de Spécialité de M.DENIS</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chaines-de-caracteres" class="md-skip">
+        <a href="#calculs" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Chaînes
+              Calculs
             
           </span>
         </div>
@@ -246,20 +246,6 @@
               
   
   
-  
-    <li class="md-nav__item">
-      <a href="../calculs/" class="md-nav__link">
-        Calculs
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
     
   
   
@@ -271,10 +257,69 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Calculs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
-        Chaînes
+        Calculs
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#activite-2-divisions-et-modulo" class="md-nav__link">
+    Activité 2: Divisions et modulo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lincrementation-tres-important-par-la-suite" class="md-nav__link">
+    L'INCRÉMENTATION TRès Important par la suite
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activite-3-autres-calculs" class="md-nav__link">
+    Activité 3: Autres calculs
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chaines/" class="md-nav__link">
+        Chaînes
+      </a>
     </li>
   
 
@@ -694,6 +739,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#activite-2-divisions-et-modulo" class="md-nav__link">
+    Activité 2: Divisions et modulo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lincrementation-tres-important-par-la-suite" class="md-nav__link">
+    L'INCRÉMENTATION TRès Important par la suite
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activite-3-autres-calculs" class="md-nav__link">
+    Activité 3: Autres calculs
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -706,91 +780,85 @@
                 
 
 
-<h1 id="chaines-de-caracteres">Chaînes de caractères</h1>
-<p><strong>TEST</strong></p>
+<h1 id="calculs">Calculs</h1>
+<h2 id="activite-2-divisions-et-modulo">Activité 2: Divisions et modulo</h2>
 <div class="admonition failure">
 <p class="admonition-title">A retenir</p>
+<p>Il existe deux opérations divisions en Python: </p>
 <ul>
-<li>But: Python permet de manipuler les lettres, mots, phrases, texte ... Ces données sont du type chaine de caractère notée <strong>String</strong>.</li>
-<li>Comment: Une chaîne de caractère est un ensemble de caractères placés entre guillemets <code>"</code> ou <code>'</code>. </li>
-<li>A savoir: La position de chaque lettre d'une chaîne est repérée par un indice. La première lettre a pour indice 0, la suivante 1, etc.</li>
-<li>Exemples d'affectation: </li>
+<li>La division entière <code>//</code></li>
+<li>La division habituelle: <code>/</code></li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">prenom</span> <span class="o">=</span> <span class="s2">&quot;Cyril&quot;</span>
-<span class="n">citation</span> <span class="o">=</span> <span class="s2">&quot;L ordinateur a de la mémoire mais aucun souvenir&quot;</span>
-<span class="n">lettre</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span>
-</code></pre></div></td></tr></table></div>
 </div>
-<h1 id="activite-3-manipulation-elementaire">Activité 3: Manipulation élémentaire</h1>
-<h2 id="objectifs">Objectifs</h2>
-<p>type chaine, concaténation, conversion de type</p>
 <div class="admonition note">
-<p class="admonition-title"> Manipulation de chaînes</p>
+<p class="admonition-title">Travail</p>
 <ol>
-<li>L'exemple ci-dessous utilise l'instruction <code>type</code>. Recopie le programme et vérifie que  le type de la variable <code>ma_chaine</code> est <class 'str'> ce qui signifie du type chaine de caractère (str pour sting).  <br />
-<div class="highlight"><pre><span></span><code><span class="n">ma_chaine</span> <span class="o">=</span> <span class="s2">&quot;NSI&quot;</span>
-<span class="nb">type</span><span class="p">(</span><span class="n">ma_chaine</span><span class="p">)</span>
-</code></pre></div></li>
-<li>Dans la console écrit:
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;Je&quot;</span>
-<span class="n">b</span> <span class="o">=</span> <span class="s2">&quot; vois&quot;</span>
-<span class="n">nb</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">c</span> <span class="o">=</span> <span class="s2">&quot; pommes dans cet arbre.&quot;</span>
+<li>Saisir dans la console Python les calculs suivants:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="mi">16</span> <span class="o">/</span> <span class="mi">5</span>
+<span class="mi">16</span> <span class="o">//</span> <span class="mi">5</span>
 </code></pre></div>
-Ajoute les chaînes a et b. Pour cela écrit dans la console:
-<div class="highlight"><pre><span></span><code><span class="n">a</span><span class="o">+</span><span class="n">b</span>
-</code></pre></div></li>
-<li>Quel résultat obtiens-tu ? On dit que les chaînes a et b ont été <strong>concaténées</strong>.</li>
-<li>Stocke le résultat de <code>a+b</code> dans une variable <code>chaine_1</code>.</li>
-<li>Essaye d'ajouter <code>chaine_1</code> à <code>nb</code>. Relève le message d'erreur qui apparaît. Explique cette erreur en utilisant la notion de <strong>type</strong> de variable.</li>
-<li>
-<p>Saisie le code suivant: 
-<div class="highlight"><pre><span></span><code><span class="n">chaine_nb</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">nb</span><span class="p">)</span>
-<span class="nb">type</span><span class="p">(</span><span class="n">chaine_nb</span><span class="p">)</span>
-</code></pre></div>
-Explique pourquoi dit-on que l'instruction <code>str()</code> permet de réaliser une conversion de type.</p>
-</li>
-<li>
-<p>Complète le programme pour que <code>message</code> contienne la chaîne: "Je vois 3 pommes dans cet arbre"
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;Je vois &quot;</span>
-<span class="n">nb</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">c</span> <span class="o">=</span> <span class="s2">&quot; pommes dans cet arbre&quot;</span>
-<span class="n">nombre</span> <span class="o">=</span> <span class="o">...</span>
-<span class="n">message</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">nombre</span> <span class="o">+</span> <span class="n">c</span>
-</code></pre></div></p>
-</li>
+<ol>
+<li>Réécrire le code précédent mais en utilisant des variables pour stocker 16 et 5 ainsi que les résultats des calculs.</li>
+<li>Explique quelle est la différence entre les deux divisions ?</li>
+<li>Quelle opération permet d'obtenir le quotient entier de la division ?</li>
 </ol>
 </div>
-<h2 id="activite-4-affichage-de-chaines">Activité 4: Affichage de chaines</h2>
-<p><strong>Découverte</strong></p>
-<p>Jusqu'ici pour connaître le contenu d'une variable, on a saisi son nom dans la console puis appuyer sur entrée. On peut aussi utiliser une instruction pour afficher dans la console le contenu d'une variable ou une chaine de caractère. </p>
+<div class="admonition failure">
+<p class="admonition-title">A retenir</p>
+<p>L'opération <code>%</code> s'appelle <strong>modulo</strong>, elle retourne le reste de la division. Par exemple, puisque <span class="arithmatex">\(16= 3\times 5 + 1\)</span> on a <code>16//5 = 3</code> et <code>16%5 = 1</code>. </p>
+</div>
 <div class="admonition note">
-<p class="admonition-title">print et f-string</p>
+<p class="admonition-title">Travail</p>
 <ol>
-<li>Saisie dans la console python le code suivant:
-<div class="highlight"><pre><span></span><code><span class="n">c1</span> <span class="o">=</span> <span class="s2">&quot;bonjour&quot;</span>
-<span class="n">c2</span> <span class="o">=</span> <span class="s1">&#39; le monde !&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">c1</span> <span class="o">+</span> <span class="n">c2</span><span class="p">)</span>
-</code></pre></div>
-Expliquer ce que fait l'instruction <code>print</code>.</li>
-<li>Modifie la dernière ligne du script afin d'affiche: <code>bonjour bonjour le monde !</code></li>
+<li>Vérifie dans la console que le modulo d'un entier pair vaut toujours 0 et que le modulo d'un entier impair vaut 1. C'est une technique que tu vas souvent utiliser pour déterminer si un entier est pair ou non.</li>
+<li>Un sac content 257 popcorns, calcule avec la console Python comment répartir les popcorns entre 3 personnes. Les popcorns restant seront pour le chien. Combien Médor reçoit-il de popcorn ?</li>
 </ol>
-<p><strong>fstrings</strong> sont des chaînes de caractère plus complexes mais très utiles pour afficher des messages contenant des informations variables. </p>
+</div>
+<h2 id="lincrementation-tres-important-par-la-suite">L'INCRÉMENTATION TRès Important par la suite</h2>
+<div class="admonition failure">
+<p class="admonition-title">Qu'est-ce qu'incrémenter une variable</p>
+<ul>
+<li>C'est quoi ?: Le mot incrémenter signifie augmenter la valeur d'une variable de 1.</li>
+<li>Exemple:
+<div class="highlight"><pre><span></span><code><span class="n">c</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">c</span> <span class="o">+</span> <span class="mi">1</span>
+</code></pre></div>
+<code>c</code> contient maintenant la valeur <strong>4</strong></li>
+<li><strong>Bien comprendre que:</strong> <code>c = c + 1</code> doit se lire de droite à gauche. Prenons la valeur de c présente dans la mémoire (c vaut 3) ajoutons <code>c + 1</code> cela fait 4. Affectons cette valeur 4 à la variable c. 
+Maintenant <code>c</code> contient 4.</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title"> à tester</p>
 <ol>
-<li>Saisie dans la console python le code suivant:
-<div class="highlight"><pre><span></span><code><span class="n">prof</span> <span class="o">=</span> <span class="s2">&quot;M.DENIS&quot;</span>
-<span class="n">matiere</span> <span class="o">=</span> <span class="s2">&quot;NSI&quot;</span>
-<span class="n">nb_eleve</span> <span class="o">=</span> <span class="mi">19</span>
-<span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">prof</span><span class="si">}</span><span class="s2"> enseigne la </span><span class="si">{</span><span class="n">matiere</span><span class="si">}</span><span class="s2"> a </span><span class="si">{</span><span class="n">nb_eleve</span><span class="si">}</span><span class="s2"> élèves de première.&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-</code></pre></div></li>
-<li>Rédige l'exécution ligne à ligne de ce script.</li>
-<li>Modifie ce code pour afficher M.MARTIN enseigne la Mathématique a 35 élèves de première.</li>
-<li>Ajoute une nouvelle variable <code>niveau</code> qui contient la chaine "terminale" afin d'afficher: <code>M.MARTIN enseigne la Mathématique a 35 élèves de terminale.</code></li>
-<li>Quelle est l'utilité des f-strings sont pratiques ?</li>
+<li>Teste le code précédent dans une console.</li>
+<li>On veut maintenant incrémenter la valeur de 2 et non plus de 1. Que proposes-tu ? Essaie </li>
+<li><code>c=c+1</code> peut s'écrire <code>c += 1</code> Vérifie que cela donne le même résultat.</li>
+<li>Explique ce que fait <code>c -= 3</code>.</li>
+</ol>
+</div>
+<h2 id="activite-3-autres-calculs">Activité 3: Autres calculs</h2>
+<div class="admonition failure">
+<p class="admonition-title">Calculatrice à mémoire</p>
+<ul>
+<li>Les calculs en python se font comme sur ta calculatrice. Lorsque le calcul est complexe, on utilise des parenthèses avec les règles de priorités.</li>
+<li>Pour élever au carré, on utilise <code>**</code>. Par exemple: <code>3**2</code> a pour valeur <code>9</code>.</li>
+<li>Les autres fonctions (racine carré, sinus, cosinus, ...) doivent être <strong>importer</strong> avant d'être utiliser. On utilise la syntaxe suivante:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
+<span class="n">sqrt</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Travail</p>
+<ol>
+<li>Créer une variable pi et lui affecter la valeur 3.14159</li>
+<li>Créer une variable <code>rayon_terrestre</code> et lui affecter la valeur 6480.</li>
+<li>On souhaite calculer la distance pour faire le tour de la Terre. On rappelle que le périmètre d'un cercle de rayon R vaut: <span class="arithmatex">\(2\pi\times R\)</span>.
+    a. Créer une variable tour_de_la_Terre qui reçoit  la valeur calculée du tour de la Terre.
+    b. En utilisant Python, évaluer la distance parcourue par la Terre autour du Soleil en un an. La distance Terre-Soleil vaut 150 000 000 km.
+    c. A quelle vitesse se déplace la Terre autour du Soleil ?</li>
 </ol>
 </div>
 
@@ -806,7 +874,7 @@ Expliquer ce que fait l'instruction <code>print</code>.</li>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../calculs/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Calculs" rel="prev">
+        <a href="../variables/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Rappels" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -815,20 +883,20 @@ Expliquer ce que fait l'instruction <code>print</code>.</li>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Calculs
+              Rappels
             </div>
           </div>
         </a>
       
       
         
-        <a href="../checkpoint1/" class="md-footer__link md-footer__link--next" aria-label="Next: Checkpoint 1" rel="next">
+        <a href="../chaines/" class="md-footer__link md-footer__link--next" aria-label="Next: Chaînes" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Checkpoint 1
+              Chaînes
             </div>
           </div>
           <div class="md-footer__button md-icon">

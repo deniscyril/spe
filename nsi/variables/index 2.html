@@ -13,7 +13,7 @@
     
     
       
-        <title>Chaînes - Enseignements de Spécialité de M.DENIS</title>
+        <title>Rappels - Enseignements de Spécialité de M.DENIS</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chaines-de-caracteres" class="md-skip">
+        <a href="#variables" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Chaînes
+              Rappels
             
           </span>
         </div>
@@ -232,11 +232,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../variables/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Rappels
       </a>
+      
     </li>
   
 
@@ -260,21 +270,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../chaines/" class="md-nav__link">
         Chaînes
       </a>
-      
     </li>
   
 
@@ -706,93 +706,62 @@
                 
 
 
-<h1 id="chaines-de-caracteres">Chaînes de caractères</h1>
-<p><strong>TEST</strong></p>
+<h1 id="variables">Variables</h1>
 <div class="admonition failure">
-<p class="admonition-title">A retenir</p>
+<p class="admonition-title">Résumé</p>
 <ul>
-<li>But: Python permet de manipuler les lettres, mots, phrases, texte ... Ces données sont du type chaine de caractère notée <strong>String</strong>.</li>
-<li>Comment: Une chaîne de caractère est un ensemble de caractères placés entre guillemets <code>"</code> ou <code>'</code>. </li>
-<li>A savoir: La position de chaque lettre d'une chaîne est repérée par un indice. La première lettre a pour indice 0, la suivante 1, etc.</li>
-<li>Exemples d'affectation: </li>
+<li>But: On utilise une <strong>variable</strong> pour stocker une information (nombre, message, ensemble de nombres, etc). </li>
+<li>Comment: On réalise une <strong>affectation</strong> c'est à dire que l'on place la donnée en mémoire. Pour pouvoir rappeller ensuite cette donnée, on donne un nom à la variable.</li>
+<li>Exemples: </li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">prenom</span> <span class="o">=</span> <span class="s2">&quot;Cyril&quot;</span>
-<span class="n">citation</span> <span class="o">=</span> <span class="s2">&quot;L ordinateur a de la mémoire mais aucun souvenir&quot;</span>
-<span class="n">lettre</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">nombre_pi</span> <span class="o">=</span> <span class="mf">3.14</span>
+<span class="n">tweet</span> <span class="o">=</span> <span class="s2">&quot;Cuicui&quot;</span>
+<span class="n">faim</span> <span class="o">=</span> <span class="kc">True</span>
 </code></pre></div></td></tr></table></div>
-</div>
-<h1 id="activite-3-manipulation-elementaire">Activité 3: Manipulation élémentaire</h1>
-<h2 id="objectifs">Objectifs</h2>
-<p>type chaine, concaténation, conversion de type</p>
-<div class="admonition note">
-<p class="admonition-title"> Manipulation de chaînes</p>
-<ol>
-<li>L'exemple ci-dessous utilise l'instruction <code>type</code>. Recopie le programme et vérifie que  le type de la variable <code>ma_chaine</code> est <class 'str'> ce qui signifie du type chaine de caractère (str pour sting).  <br />
-<div class="highlight"><pre><span></span><code><span class="n">ma_chaine</span> <span class="o">=</span> <span class="s2">&quot;NSI&quot;</span>
-<span class="nb">type</span><span class="p">(</span><span class="n">ma_chaine</span><span class="p">)</span>
-</code></pre></div></li>
-<li>Dans la console écrit:
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;Je&quot;</span>
-<span class="n">b</span> <span class="o">=</span> <span class="s2">&quot; vois&quot;</span>
-<span class="n">nb</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">c</span> <span class="o">=</span> <span class="s2">&quot; pommes dans cet arbre.&quot;</span>
-</code></pre></div>
-Ajoute les chaînes a et b. Pour cela écrit dans la console:
-<div class="highlight"><pre><span></span><code><span class="n">a</span><span class="o">+</span><span class="n">b</span>
-</code></pre></div></li>
-<li>Quel résultat obtiens-tu ? On dit que les chaînes a et b ont été <strong>concaténées</strong>.</li>
-<li>Stocke le résultat de <code>a+b</code> dans une variable <code>chaine_1</code>.</li>
-<li>Essaye d'ajouter <code>chaine_1</code> à <code>nb</code>. Relève le message d'erreur qui apparaît. Explique cette erreur en utilisant la notion de <strong>type</strong> de variable.</li>
-<li>
-<p>Saisie le code suivant: 
-<div class="highlight"><pre><span></span><code><span class="n">chaine_nb</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">nb</span><span class="p">)</span>
-<span class="nb">type</span><span class="p">(</span><span class="n">chaine_nb</span><span class="p">)</span>
-</code></pre></div>
-Explique pourquoi dit-on que l'instruction <code>str()</code> permet de réaliser une conversion de type.</p>
+<ul>
+<li>Explications: <ol>
+<li>le nombre décimal 3,14 est enregistré dans la variable nombre_pi. On dit que la variable <code>nombre_pi</code> est du type flottant ou <code>float</code>.</li>
+<li>La <strong>chaine de caractères</strong> "Cuicui" est enregistée dans la variable <code>tweet</code>. On dit que la variable <code>tweet</code> est du type <strong>String</strong>.</li>
+<li>La variable faim contient une valeur <strong>booléenne</strong>. Il s'agit d'une valeur qui vaut soit vrai soit faux. En python cela s'écrit soit <code>True</code> soit <code>False</code>. Le type de cette variable est <strong>bool</strong></li>
+</ol>
 </li>
-<li>
-<p>Complète le programme pour que <code>message</code> contienne la chaîne: "Je vois 3 pommes dans cet arbre"
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;Je vois &quot;</span>
-<span class="n">nb</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">c</span> <span class="o">=</span> <span class="s2">&quot; pommes dans cet arbre&quot;</span>
-<span class="n">nombre</span> <span class="o">=</span> <span class="o">...</span>
-<span class="n">message</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">nombre</span> <span class="o">+</span> <span class="n">c</span>
-</code></pre></div></p>
-</li>
-</ol>
+</ul>
 </div>
-<h2 id="activite-4-affichage-de-chaines">Activité 4: Affichage de chaines</h2>
-<p><strong>Découverte</strong></p>
-<p>Jusqu'ici pour connaître le contenu d'une variable, on a saisi son nom dans la console puis appuyer sur entrée. On peut aussi utiliser une instruction pour afficher dans la console le contenu d'une variable ou une chaine de caractère. </p>
-<div class="admonition note">
-<p class="admonition-title">print et f-string</p>
+<h1 id="activite-1">Activité 1:</h1>
+<p><strong>But</strong>: Réaliser des affectations et étudier certains <strong>types</strong> de données.</p>
+<h2 id="consignes">Consignes</h2>
 <ol>
-<li>Saisie dans la console python le code suivant:
-<div class="highlight"><pre><span></span><code><span class="n">c1</span> <span class="o">=</span> <span class="s2">&quot;bonjour&quot;</span>
-<span class="n">c2</span> <span class="o">=</span> <span class="s1">&#39; le monde !&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">c1</span> <span class="o">+</span> <span class="n">c2</span><span class="p">)</span>
+<li>Ouvre une console Python ou va sur le site: https://console.basthon.fr (la console est l'écran de droite)</li>
+<li>Dans la console Python, saisir au clavier (pas de copier/ coller) les instructions suivantes:</li>
+</ol>
+<p>L'instruction <code>type</code> appliquée à un nom de variable renvoie le type de donnée contenu dans la variable.</p>
+<div class="highlight"><span class="filename">En mode console</span><pre><span></span><code><span class="n">nombre_entier</span> <span class="o">=</span> <span class="mi">3</span> 
+<span class="n">nombre_flottant</span> <span class="o">=</span> <span class="mf">3.14</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">nombre_entier</span><span class="p">)</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">nombre_flottant</span><span class="p">)</span>
+<span class="n">double</span> <span class="o">=</span> <span class="n">nombre_entier</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="n">somme</span> <span class="o">=</span> <span class="n">nombre_entier</span> <span class="o">+</span> <span class="n">nombre_flottant</span>
+<span class="n">double</span>
+<span class="n">somme</span>
 </code></pre></div>
-Expliquer ce que fait l'instruction <code>print</code>.</li>
-<li>Modifie la dernière ligne du script afin d'affiche: <code>bonjour bonjour le monde !</code></li>
-</ol>
-<p><strong>fstrings</strong> sont des chaînes de caractère plus complexes mais très utiles pour afficher des messages contenant des informations variables. </p>
+<div class="admonition note">
+<p class="admonition-title">Questions</p>
 <ol>
-<li>Saisie dans la console python le code suivant:
-<div class="highlight"><pre><span></span><code><span class="n">prof</span> <span class="o">=</span> <span class="s2">&quot;M.DENIS&quot;</span>
-<span class="n">matiere</span> <span class="o">=</span> <span class="s2">&quot;NSI&quot;</span>
-<span class="n">nb_eleve</span> <span class="o">=</span> <span class="mi">19</span>
-<span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">prof</span><span class="si">}</span><span class="s2"> enseigne la </span><span class="si">{</span><span class="n">matiere</span><span class="si">}</span><span class="s2"> a </span><span class="si">{</span><span class="n">nb_eleve</span><span class="si">}</span><span class="s2"> élèves de première.&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-</code></pre></div></li>
-<li>Rédige l'exécution ligne à ligne de ce script.</li>
-<li>Modifie ce code pour afficher M.MARTIN enseigne la Mathématique a 35 élèves de première.</li>
-<li>Ajoute une nouvelle variable <code>niveau</code> qui contient la chaine "terminale" afin d'afficher: <code>M.MARTIN enseigne la Mathématique a 35 élèves de terminale.</code></li>
-<li>Quelle est l'utilité des f-strings sont pratiques ?</li>
+<li>Quel est le type de la variable <code>double</code>. Vérifie en utilisant l'instruction <code>type(double)</code>.</li>
+<li>Quel est le type de la variable <code>somme</code>. </li>
+<li>Quelle est l'erreur commise par Python lors du calcul de la somme ? Propose une explication.</li>
 </ol>
 </div>
+<details class="warning">
+<summary>Correction - Activité 1</summary>
+<ol>
+<li>double est une variable de type flottant: python renvoie <code>float</code> après exécution de <code>type(double)</code> dans la console.</li>
+<li>Lorsque l'on addition un float avec un int le résultat doit pouvoir contenir la partir décimal du float. C'est pourquoi somme est du type float.</li>
+<li>Python affiche que 6 + 3.14 = 6.140000000000001, il commet une erreur de 0.000000000000001. C'est peu mais c'est une erreur qui risque de se cumuler avec d'autres par la suite. Seul les nombres entiers sont exacts en python.</li>
+</ol>
+</details>
 
               
             </article>
@@ -805,30 +774,15 @@ Expliquer ce que fait l'instruction <code>print</code>.</li>
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        
-        <a href="../calculs/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Calculs" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Calculs
-            </div>
-          </div>
-        </a>
-      
       
         
-        <a href="../checkpoint1/" class="md-footer__link md-footer__link--next" aria-label="Next: Checkpoint 1" rel="next">
+        <a href="../calculs/" class="md-footer__link md-footer__link--next" aria-label="Next: Calculs" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Checkpoint 1
+              Calculs
             </div>
           </div>
           <div class="md-footer__button md-icon">
