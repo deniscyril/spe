@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#structures-conditionnelles-preambule" class="md-skip">
+        <a href="#structures-conditionnelles-e01" class="md-skip">
           Skip to content
         </a>
       
@@ -357,8 +357,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#activite-1-expression-booleenne" class="md-nav__link">
-    Activité 1: Expression booléenne
+  <a href="#variable-et-expression-booleenne" class="md-nav__link">
+    Variable et expression booléenne
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activite-1-distinguer-variable-et-expression-booleenne" class="md-nav__link">
+    Activité 1: Distinguer Variable et expression booléenne
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activite-2-construire-une-table-de-verite" class="md-nav__link">
+    Activité 2: Construire une table de vérité
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activite-3-un-peu-plus-loin-avec-xor" class="md-nav__link">
+    Activité 3: Un peu plus loin avec XOR
   </a>
   
 </li>
@@ -821,8 +842,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#activite-1-expression-booleenne" class="md-nav__link">
-    Activité 1: Expression booléenne
+  <a href="#variable-et-expression-booleenne" class="md-nav__link">
+    Variable et expression booléenne
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activite-1-distinguer-variable-et-expression-booleenne" class="md-nav__link">
+    Activité 1: Distinguer Variable et expression booléenne
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activite-2-construire-une-table-de-verite" class="md-nav__link">
+    Activité 2: Construire une table de vérité
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activite-3-un-peu-plus-loin-avec-xor" class="md-nav__link">
+    Activité 3: Un peu plus loin avec XOR
   </a>
   
 </li>
@@ -841,18 +883,17 @@
                 
 
 
-<h1 id="structures-conditionnelles-preambule">Structures Conditionnelles (préambule)</h1>
+<h1 id="structures-conditionnelles-e01">Structures Conditionnelles E01</h1>
+<h2 id="variable-et-expression-booleenne">Variable et expression booléenne</h2>
 <div class="admonition failure">
 <p class="admonition-title">A retenir</p>
 <ul>
 <li>Une variable booléenne contient soit la valeur <code>True</code> soit la valeur <code>False</code>.</li>
-<li>Une expression booléenne contient au moins un opérateur booléen sa valeur et sa valeur est vraie ou fausse.</li>
+<li>Une expression booléenne contient un ou plusieurs opérateurs booléens (OR, AND, == ou !=).</li>
+<li>La valeur d'une expression booléenne est <code>True</code> soit la valeur <code>False</code>.</li>
 </ul>
 </div>
-<h2 id="activite-1-expression-booleenne">Activité 1: Expression booléenne</h2>
-<ol>
-<li>Repérer dans ce programme les affectations et les expressions booléennes. </li>
-</ol>
+<h2 id="activite-1-distinguer-variable-et-expression-booleenne">Activité 1: Distinguer Variable et expression booléenne</h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -874,15 +915,21 @@
 <span class="n">age</span> <span class="o">!=</span> <span class="mi">18</span>
 </code></pre></div></td></tr></table></div>
 <ol>
-<li>Justifier la valeur de chaque expression booléenne.</li>
-<li>En modifiant les valeurs de <code>a</code> et <code>b</code> écrire la table de vérité de l'opérateur booléen <code>or</code></li>
+<li>Repérer dans ce programme les affectations et les expressions booléennes. </li>
+<li>Prédire en justifiant la valeur de chaque expression booléenne.</li>
 </ol>
+<h2 id="activite-2-construire-une-table-de-verite">Activité 2: Construire une table de vérité</h2>
 <div class="highlight"><span class="filename">En mode console</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="n">b</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="n">a</span> <span class="ow">or</span> <span class="n">b</span>
 </code></pre></div>
 <ol>
-<li>Complète le programme suivant afin que les expressions booléennes soient vraies:</li>
+<li>
+<p>En modifiant les valeurs de <code>a</code> et <code>b</code> écrire la table de vérité de l'opérateur booléen <code>or</code></p>
+</li>
+<li>
+<p>Complète le programme suivant afin que les expressions booléennes soient vraies:</p>
+</li>
 </ol>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -896,14 +943,19 @@
 <span class="ow">not</span> <span class="p">(</span> <span class="n">a</span> <span class="o">...</span> <span class="mi">3</span><span class="p">)</span>
 <span class="p">(</span><span class="o">...</span> <span class="n">b</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span> <span class="n">a</span> <span class="o">==</span> <span class="o">...</span><span class="p">)</span> 
 </code></pre></div></td></tr></table></div>
-<ol>
-<li>L'opérateur booléen <code>or</code> est un ou inclusif. Dans l'expression <code>a or b</code> si a et b sont vraies alors l'expression est aussi vraie. On veut écrire une expression booléenne qui se comporte comme un ou exclusif c'est à dire en valant faux si a et b sont vraies. Par exemple: dans l'expression "fromage ou dessert ?" on ne valide pas le choix fromage ET dessert. Compléter le code ci-dessous.</li>
-</ol>
-<p><div class="highlight"><pre><span></span><code>fromage = False
-dessert = False
-# Expression booléeenne à écrire
+<h2 id="activite-3-un-peu-plus-loin-avec-xor">Activité 3: Un peu plus loin avec XOR</h2>
+<p>L'opérateur booléen <code>or</code> est un ou <strong>inclusif</strong>. Cela signifie que dans l'expression <code>a or b</code> si a et b sont vraies alors l'expression est aussi vraie. </p>
+<p>On veut écrire une expression booléenne qui se comporte comme un ou <strong>exclusif</strong> c'est à dire en valant faux si a et b sont vraies. </p>
+<ul>
+<li>Par exemple: dans l'expression "fromage ou dessert ?" on ne valide pas le choix fromage ET dessert. Compléter le code ci-dessous.</li>
+</ul>
+<div class="highlight"><span class="filename">En mode console</span><pre><span></span><code><span class="n">fromage</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">dessert</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="c1"># Expression booléeenne se comportant comme un OU-EXLUSIF à écrire</span>
 </code></pre></div>
-5. A l'aide de votre programme écrire la table de vérité de cette opérateur OU-Exclusif</p>
+<ol>
+<li>A l'aide de votre programme écrire la table de vérité de  l'opérateur OU-Exclusif</li>
+</ol>
 
               
             </article>

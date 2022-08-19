@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#structures-conditionnelles-preambule" class="md-skip">
+        <a href="#structures-conditionnelles-e02" class="md-skip">
           Skip to content
         </a>
       
@@ -371,9 +371,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#activite-1-expression-booleenne" class="md-nav__link">
-    Activité 1: Expression booléenne
+  <a href="#activite-1-application-directe" class="md-nav__link">
+    Activité 1: Application directe
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activite-2-completer-et-debugger" class="md-nav__link">
+    Activité 2: Compléter et Débugger
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activite-3-ecriture-de-code" class="md-nav__link">
+    Activité 3: Ecriture de code
+  </a>
+  
+    <nav class="md-nav" aria-label="Activité 3: Ecriture de code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#situation" class="md-nav__link">
+    Situation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -821,9 +848,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#activite-1-expression-booleenne" class="md-nav__link">
-    Activité 1: Expression booléenne
+  <a href="#activite-1-application-directe" class="md-nav__link">
+    Activité 1: Application directe
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activite-2-completer-et-debugger" class="md-nav__link">
+    Activité 2: Compléter et Débugger
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activite-3-ecriture-de-code" class="md-nav__link">
+    Activité 3: Ecriture de code
+  </a>
+  
+    <nav class="md-nav" aria-label="Activité 3: Ecriture de code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#situation" class="md-nav__link">
+    Situation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -841,18 +895,14 @@
                 
 
 
-<h1 id="structures-conditionnelles-preambule">Structures Conditionnelles (préambule)</h1>
+<h1 id="structures-conditionnelles-e02">Structures Conditionnelles E02</h1>
 <div class="admonition failure">
 <p class="admonition-title">A retenir</p>
 <ul>
-<li>Une variable booléenne contient soit la valeur <code>True</code> soit la valeur <code>False</code>.</li>
-<li>Une expression booléenne contient au moins un opérateur booléen sa valeur et sa valeur est vraie ou fausse.</li>
+<li>L'instruction <strong>IF</strong> permet d'exécuter un bloc d'instructions à la <strong>condition</strong> qu'une expression booléenne possède la valeur vrai.</li>
 </ul>
 </div>
-<h2 id="activite-1-expression-booleenne">Activité 1: Expression booléenne</h2>
-<ol>
-<li>Repérer dans ce programme les affectations et les expressions booléennes. </li>
-</ol>
+<h2 id="activite-1-application-directe">Activité 1: Application directe</h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -862,48 +912,71 @@
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">majeur</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="n">age</span> <span class="o">=</span> <span class="mi">18</span>
-<span class="n">age</span> <span class="o">==</span> <span class="mi">18</span>
-<span class="n">age</span> <span class="o">&lt;</span> <span class="mi">18</span>
-<span class="n">age</span> <span class="o">!=</span> <span class="mi">12</span>
-<span class="p">(</span><span class="n">majeur</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">age</span> <span class="o">==</span> <span class="mi">18</span><span class="p">)</span>
-<span class="n">age</span> <span class="o">=</span> <span class="mi">16</span>
-<span class="p">(</span><span class="n">majeur</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">)</span>
-<span class="ow">not</span> <span class="n">majeur</span>
-<span class="n">age</span> <span class="o">!=</span> <span class="mi">18</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">variable_bool</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="k">if</span> <span class="n">variable_bool</span> <span class="o">==</span> <span class="kc">True</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bloc 1&quot;</span><span class="p">)</span>
+    <span class="n">variable_bool</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bloc 2&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">variable_bool</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bloc 3&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;FIN&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <ol>
-<li>Justifier la valeur de chaque expression booléenne.</li>
-<li>En modifiant les valeurs de <code>a</code> et <code>b</code> écrire la table de vérité de l'opérateur booléen <code>or</code></li>
+<li>Recopie et test le programme ci-dessus.</li>
+<li>Explique et <strong>justifie</strong> ligne à ligne son exécution.</li>
 </ol>
-<div class="highlight"><span class="filename">En mode console</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="n">b</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="n">a</span> <span class="ow">or</span> <span class="n">b</span>
-</code></pre></div>
+<h2 id="activite-2-completer-et-debugger">Activité 2: Compléter et Débugger</h2>
 <ol>
-<li>Complète le programme suivant afin que les expressions booléennes soient vraies:</li>
+<li>Modifie le code suivant afin que le programme affiche "Accès autorisé" si l'age est supérieur ou égal à 18.</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">age</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="k">if</span> <span class="o">....</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accès autorisé&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Le programme ci-dessous vérifie avec un test conditionnel que admin contient vrai et que age est supérieur à 18. Si cette condition est vraie alors il affiche Connecté en tant qu' ADMIN ! sinon il n'affiche rien. <strong>Corriger les erreurs</strong> dans le programme suivant:</li>
 </ol>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">b</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="n">c</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="p">(</span><span class="n">a</span> <span class="o">...</span> <span class="n">c</span><span class="p">)</span> <span class="ow">or</span> <span class="n">b</span>
-<span class="ow">not</span> <span class="p">(</span> <span class="n">a</span> <span class="o">...</span> <span class="mi">3</span><span class="p">)</span>
-<span class="p">(</span><span class="o">...</span> <span class="n">b</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span> <span class="n">a</span> <span class="o">==</span> <span class="o">...</span><span class="p">)</span> 
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">admin</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">21</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">admin</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">18</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Connecté en tant qu&#39; ADMIN !&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<ol>
-<li>L'opérateur booléen <code>or</code> est un ou inclusif. Dans l'expression <code>a or b</code> si a et b sont vraies alors l'expression est aussi vraie. On veut écrire une expression booléenne qui se comporte comme un ou exclusif c'est à dire en valant faux si a et b sont vraies. Par exemple: dans l'expression "fromage ou dessert ?" on ne valide pas le choix fromage ET dessert. Compléter le code ci-dessous.</li>
-</ol>
-<p><div class="highlight"><pre><span></span><code>fromage = False
-dessert = False
-# Expression booléeenne à écrire
-</code></pre></div>
-5. A l'aide de votre programme écrire la table de vérité de cette opérateur OU-Exclusif</p>
+<h2 id="activite-3-ecriture-de-code">Activité 3: Ecriture de code</h2>
+<h3 id="situation">Situation</h3>
+<p>Un hôtel loue des chambres avec un tarif intéressant si on arrive pas trop tard. Plus on arrive tôt et moins on paye.</p>
+<ul>
+<li>Le prix de la chambre est de 10 pièces à midi, et augmente de 5 pièces chaque heure après midi. Il est donc de 15 pièces à 13h, etc. Il ne peut cependant pas dépasser 53 pièces.</li>
+<li>Dans votre programme, utilisez une variable nommée <code>heure</code> qui contient un entier représentant l'heure d'arrivée. <code>heure</code> vaut 0 si on arrive à midi, 1 si on arrive à 1h de l'après-midi, etc, 12 si on arrive à minuit.</li>
+<li>Votre programme devra afficher le prix à payer correspondant à l'heure d'arrivée.</li>
+</ul>
+<details class="warning">
+<summary>Aide 1</summary>
+<p>Relation prix et heure: <code>prix = 10 + 5 * heure</code></p>
+</details>
+<details class="warning">
+<summary>Aide 2: Version à trous</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">heure</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">prix</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">heure</span>
+<span class="k">if</span> <span class="n">prix</span> <span class="o">&gt;</span> <span class="o">...</span><span class="p">:</span>
+    <span class="n">prix</span> <span class="o">=....</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">prix</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
 
               
             </article>

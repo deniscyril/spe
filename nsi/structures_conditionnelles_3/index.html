@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#structures-conditionnelles-preambule" class="md-skip">
+        <a href="#structures-conditionnelles-e03" class="md-skip">
           Skip to content
         </a>
       
@@ -385,9 +385,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#activite-1-expression-booleenne" class="md-nav__link">
-    Activité 1: Expression booléenne
+  <a href="#activite-1-application-directe" class="md-nav__link">
+    Activité 1: Application directe
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activite-2-completer-et-debugger" class="md-nav__link">
+    Activité 2: Compléter et Débugger
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activite-3-ecriture-de-code" class="md-nav__link">
+    Activité 3: Ecriture de code
+  </a>
+  
+    <nav class="md-nav" aria-label="Activité 3: Ecriture de code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#situation-1" class="md-nav__link">
+    Situation 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#situation-2" class="md-nav__link">
+    Situation 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -821,9 +855,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#activite-1-expression-booleenne" class="md-nav__link">
-    Activité 1: Expression booléenne
+  <a href="#activite-1-application-directe" class="md-nav__link">
+    Activité 1: Application directe
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activite-2-completer-et-debugger" class="md-nav__link">
+    Activité 2: Compléter et Débugger
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activite-3-ecriture-de-code" class="md-nav__link">
+    Activité 3: Ecriture de code
+  </a>
+  
+    <nav class="md-nav" aria-label="Activité 3: Ecriture de code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#situation-1" class="md-nav__link">
+    Situation 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#situation-2" class="md-nav__link">
+    Situation 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -841,18 +909,80 @@
                 
 
 
-<h1 id="structures-conditionnelles-preambule">Structures Conditionnelles (préambule)</h1>
+<h1 id="structures-conditionnelles-e03">Structures Conditionnelles E03</h1>
 <div class="admonition failure">
 <p class="admonition-title">A retenir</p>
-<ul>
-<li>Une variable booléenne contient soit la valeur <code>True</code> soit la valeur <code>False</code>.</li>
-<li>Une expression booléenne contient au moins un opérateur booléen sa valeur et sa valeur est vraie ou fausse.</li>
-</ul>
+<p>On étudie ici une structure très courante qui se décompose en 2 tests conditionnels et 3 blocs d'instructions dont <strong>1 seul</strong> sera exécuté.</p>
+<p>La structure générale est:</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">condition_1</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span> 
+    <span class="n">bloc</span> <span class="mi">1</span>
+<span class="k">elif</span> <span class="n">condition_2</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+   <span class="n">bloc</span> <span class="mi">2</span>
+<span class="k">else</span><span class="p">:</span> 
+   <span class="n">bloc</span> <span class="mi">3</span>
+</code></pre></div>
+<p><strong>Attenion Syntaxe</strong>: Ne pas oublier le <code>:</code> à la fin des lignes contenant if, elif et else. Remarquez aussi l'indentation des 3 blocs.</p>
 </div>
-<h2 id="activite-1-expression-booleenne">Activité 1: Expression booléenne</h2>
+<h2 id="activite-1-application-directe">Activité 1: Application directe</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">note</span> <span class="o">=</span> <span class="mi">11</span>
+<span class="k">if</span> <span class="n">note</span> <span class="o">&gt;=</span><span class="mi">10</span><span class="p">:</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bonne note&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Mauvaise note&#39;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 <ol>
-<li>Repérer dans ce programme les affectations et les expressions booléennes. </li>
+<li>Saisir et commenter en détail le programme.</li>
+<li>Modifier le programme pour qu'il affiche "Mauvaise note".</li>
 </ol>
+<h2 id="activite-2-completer-et-debugger">Activité 2: Compléter et Débugger</h2>
+<ol>
+<li>Corriger les erreurs dans le programme suivant:</li>
+</ol>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="k">if</span> <span class="n">a</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;majeur&#39;</span><span class="p">)</span>
+<span class="k">else</span> <span class="n">a</span><span class="o">&lt;</span><span class="mi">18</span><span class="p">:</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;mineur&#39;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+2. Compléter le programme suivant qui attribue une mention au bac. </p>
+<pre><code>- Inférieur à 10: Recalé
+- Entre 10 et 12: Passable
+- Entre 12 et 14: Assez-bien
+- Entre 14 et 16: Bien
+- 16 et plus: Très bien
+</code></pre>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">note</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="k">if</span> <span class="n">note</span> <span class="o">&gt;=</span> <span class="mi">16</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Très bien&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">note</span> <span class="o">&gt;=</span> <span class="mi">14</span><span class="p">:</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bien&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="o">...</span> <span class="p">:</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Assez-bien&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">note</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">:</span>
+<span class="o">....</span>
+<span class="k">else</span><span class="p">:</span>
+<span class="o">....</span>
+</code></pre></div></td></tr></table></div>
+3. Modifier le programme précédent en inversant l'odre des deux premiers tests conditionnels. Que se passe-t-il ? Justifie.
+4. On souhaite que lorsque l'utilisateur a plus de 18 ans et possède son code et le permis le programme affiche "vous pouvez conduire". Corrigez les erreurs de ce programme: 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -862,48 +992,40 @@
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">majeur</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="n">age</span> <span class="o">=</span> <span class="mi">18</span>
-<span class="n">age</span> <span class="o">==</span> <span class="mi">18</span>
-<span class="n">age</span> <span class="o">&lt;</span> <span class="mi">18</span>
-<span class="n">age</span> <span class="o">!=</span> <span class="mi">12</span>
-<span class="p">(</span><span class="n">majeur</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">age</span> <span class="o">==</span> <span class="mi">18</span><span class="p">)</span>
-<span class="n">age</span> <span class="o">=</span> <span class="mi">16</span>
-<span class="p">(</span><span class="n">majeur</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">)</span>
-<span class="ow">not</span> <span class="n">majeur</span>
-<span class="n">age</span> <span class="o">!=</span> <span class="mi">18</span>
-</code></pre></div></td></tr></table></div>
-<ol>
-<li>Justifier la valeur de chaque expression booléenne.</li>
-<li>En modifiant les valeurs de <code>a</code> et <code>b</code> écrire la table de vérité de l'opérateur booléen <code>or</code></li>
-</ol>
-<div class="highlight"><span class="filename">En mode console</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="n">b</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="n">a</span> <span class="ow">or</span> <span class="n">b</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">age</span> <span class="o">=</span> <span class="mi">19</span>
+<span class="n">code</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">permis</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">14</span><span class="p">:</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;vous pouvez apprendre à conduire un scooter&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">code</span> <span class="o">==</span> <span class="kc">True</span> <span class="ow">and</span> <span class="n">age</span> <span class="o">&gt;=</span><span class="mi">18</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">permis</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;vous pouvez conduire une voiture&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;vous pouvez apprendre à conduire une voiture&#39;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+<h2 id="activite-3-ecriture-de-code">Activité 3: Ecriture de code</h2>
+<h3 id="situation-1">Situation 1</h3>
+<p>Un nombre pair est divisible par 2. Une autre manière de le dire est que le reste de la division par 2 vaut 0. </p>
+<ul>
+<li><strong>Exemple</strong> 14 est pair car lorsqu'on le divise par 2 il reste 0 (et le quotient vaut 7). En Python, pour obtenir le reste de la division de 14 par 2, on écrit: <code>14 % 2</code> </li>
+</ul>
+<p><div class="highlight"><span class="filename">En mode console</span><pre><span></span><code>    <span class="mi">14</span> <span class="o">%</span> <span class="mi">2</span>
+    <span class="mi">5</span> <span class="o">%</span> <span class="mi">2</span>
+    <span class="mi">4</span> <span class="o">%</span> <span class="mi">2</span>
+    <span class="mi">3</span> <span class="o">%</span> <span class="mi">2</span>
+    <span class="mi">13</span> <span class="o">%</span> <span class="mi">2</span>
 </code></pre></div>
-<ol>
-<li>Complète le programme suivant afin que les expressions booléennes soient vraies:</li>
-</ol>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">b</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="n">c</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="p">(</span><span class="n">a</span> <span class="o">...</span> <span class="n">c</span><span class="p">)</span> <span class="ow">or</span> <span class="n">b</span>
-<span class="ow">not</span> <span class="p">(</span> <span class="n">a</span> <span class="o">...</span> <span class="mi">3</span><span class="p">)</span>
-<span class="p">(</span><span class="o">...</span> <span class="n">b</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span> <span class="n">a</span> <span class="o">==</span> <span class="o">...</span><span class="p">)</span> 
-</code></pre></div></td></tr></table></div>
-<ol>
-<li>L'opérateur booléen <code>or</code> est un ou inclusif. Dans l'expression <code>a or b</code> si a et b sont vraies alors l'expression est aussi vraie. On veut écrire une expression booléenne qui se comporte comme un ou exclusif c'est à dire en valant faux si a et b sont vraies. Par exemple: dans l'expression "fromage ou dessert ?" on ne valide pas le choix fromage ET dessert. Compléter le code ci-dessous.</li>
-</ol>
-<p><div class="highlight"><pre><span></span><code>fromage = False
-dessert = False
-# Expression booléeenne à écrire
-</code></pre></div>
-5. A l'aide de votre programme écrire la table de vérité de cette opérateur OU-Exclusif</p>
+1. Tester ce code dans une console python en observant les valeurs renvoyées.
+2. Expliquer comment avec l'opérateur <code>%</code> on peut en python tester si un nombre est pair ou impair.
+3. Ecrire un programme qui utilise une variable <code>n</code> contenant un entier et affiche <code>pair</code> si celui-ci est pair et impair dans le cas où il est impair.</p>
+<h3 id="situation-2">Situation 2</h3>
+<p>Une année est bissextile si elle est divisible par 4. Cependant les siècles ne sont pas bissextiles, sauf les multiples de 400. La valeur de l'année est stockée dans une variable notée: <code>an</code>. Ecrire un programme qui affiche si une année est bissextile. Vérifiez que 2100 n'est pas bissextile contrairement à 2012. </p>
+<details class="warning">
+<summary>Aide</summary>
+<p>Pour savoir si l'année est divisible par 4 on utilisera <code>an % 4</code> et on regarde si cela vaut 0</p>
+</details>
 
               
             </article>

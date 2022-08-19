@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chaines-de-caracteres" class="md-skip">
+        <a href="#variables-e02-chaines-de-caracteres" class="md-skip">
           Skip to content
         </a>
       
@@ -795,7 +795,7 @@
                 
 
 
-<h1 id="chaines-de-caracteres">Chaînes de caractères</h1>
+<h1 id="variables-e02-chaines-de-caracteres">Variables E02: Chaînes de caractères</h1>
 <div class="admonition failure">
 <p class="admonition-title">A retenir</p>
 <ul>
@@ -811,47 +811,51 @@
 <span class="n">lettre</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span>
 </code></pre></div></td></tr></table></div>
 </div>
-<h1 id="activite-4-manipulation-elementaire">Activité 4: Manipulation élémentaire</h1>
+<h1 id="activite-1-manipulation-elementaire">Activité 1: Manipulation élémentaire</h1>
 <h2 id="objectifs">Objectifs</h2>
 <p>type chaine, concaténation, conversion de type</p>
 <div class="admonition note">
 <p class="admonition-title"> Manipulation de chaînes</p>
 <ol>
 <li>L'exemple ci-dessous utilise l'instruction <code>type</code>. Recopie le programme et vérifie que  le type de la variable <code>ma_chaine</code> est <class 'str'> ce qui signifie du type chaine de caractère (str pour sting).  <br />
-<div class="highlight"><pre><span></span><code><span class="n">ma_chaine</span> <span class="o">=</span> <span class="s2">&quot;NSI&quot;</span>
+<div class="highlight"><span class="filename">En mode console</span><pre><span></span><code><span class="n">ma_chaine</span> <span class="o">=</span> <span class="s2">&quot;NSI&quot;</span>
 <span class="nb">type</span><span class="p">(</span><span class="n">ma_chaine</span><span class="p">)</span>
 </code></pre></div></li>
 <li>Dans la console écrit:
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;Je&quot;</span>
+<div class="highlight"><span class="filename">En mode console</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;Je&quot;</span>
 <span class="n">b</span> <span class="o">=</span> <span class="s2">&quot; vois&quot;</span>
 <span class="n">nb</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot; pommes dans cet arbre.&quot;</span>
 </code></pre></div>
 Ajoute les chaînes a et b. Pour cela écrit dans la console:
-<div class="highlight"><pre><span></span><code><span class="n">a</span><span class="o">+</span><span class="n">b</span>
+<div class="highlight"><span class="filename">En mode console</span><pre><span></span><code><span class="n">a</span><span class="o">+</span><span class="n">b</span>
 </code></pre></div></li>
 <li>Quel résultat obtiens-tu ? On dit que les chaînes a et b ont été <strong>concaténées</strong>.</li>
 <li>Stocke le résultat de <code>a+b</code> dans une variable <code>chaine_1</code>.</li>
 <li>Essaye d'ajouter <code>chaine_1</code> à <code>nb</code>. Relève le message d'erreur qui apparaît. Explique cette erreur en utilisant la notion de <strong>type</strong> de variable.</li>
 <li>
 <p>Saisie le code suivant: 
-<div class="highlight"><pre><span></span><code><span class="n">chaine_nb</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">nb</span><span class="p">)</span>
+<div class="highlight"><span class="filename">En mode console</span><pre><span></span><code><span class="n">chaine_nb</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">nb</span><span class="p">)</span>
 <span class="nb">type</span><span class="p">(</span><span class="n">chaine_nb</span><span class="p">)</span>
 </code></pre></div>
 Explique pourquoi dit-on que l'instruction <code>str()</code> permet de réaliser une conversion de type.</p>
 </li>
 <li>
 <p>Complète le programme pour que <code>message</code> contienne la chaîne: "Je vois 3 pommes dans cet arbre"
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;Je vois &quot;</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;Je vois &quot;</span>
 <span class="n">nb</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot; pommes dans cet arbre&quot;</span>
 <span class="n">nombre</span> <span class="o">=</span> <span class="o">...</span>
 <span class="n">message</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">nombre</span> <span class="o">+</span> <span class="n">c</span>
-</code></pre></div></p>
+</code></pre></div></td></tr></table></div></p>
 </li>
 </ol>
 </div>
-<h2 id="activite-5-affichage-de-chaines">Activité 5: Affichage de chaines</h2>
+<h2 id="activite-2-affichage-de-chaines">Activité 2: Affichage de chaines</h2>
 <p><strong>Découverte</strong></p>
 <p>Jusqu'ici pour connaître le contenu d'une variable, on a saisi son nom dans la console puis appuyer sur entrée. On peut aussi utiliser une instruction pour afficher dans la console le contenu d'une variable ou une chaine de caractère. </p>
 <div class="admonition note">
@@ -869,7 +873,7 @@ Expliquer ce que fait l'instruction <code>print</code>.</li>
 <p><strong>fstrings</strong> sont des chaînes de caractère plus complexes mais très utiles pour afficher des messages contenant des informations variables. </p>
 <ol>
 <li>Saisie dans la console python le code suivant:
-<div class="highlight"><pre><span></span><code><span class="n">prof</span> <span class="o">=</span> <span class="s2">&quot;M.DENIS&quot;</span>
+<div class="highlight"><span class="filename">En mode console</span><pre><span></span><code><span class="n">prof</span> <span class="o">=</span> <span class="s2">&quot;M.DENIS&quot;</span>
 <span class="n">matiere</span> <span class="o">=</span> <span class="s2">&quot;NSI&quot;</span>
 <span class="n">nb_eleve</span> <span class="o">=</span> <span class="mi">19</span>
 <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">prof</span><span class="si">}</span><span class="s2"> enseigne la </span><span class="si">{</span><span class="n">matiere</span><span class="si">}</span><span class="s2"> a </span><span class="si">{</span><span class="n">nb_eleve</span><span class="si">}</span><span class="s2"> élèves de première.&quot;</span>
