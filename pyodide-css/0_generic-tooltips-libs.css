@@ -1,0 +1,176 @@
+/*
+pyodide-mkdocs-theme
+Copyleft GNU GPLv3 🄯 2024 Frédéric Zinelli
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.
+If not, see <https://www.gnu.org/licenses/>.
+*/
+
+/* https://pustelto.com/blog/optimizing-css-for-faster-page-loads/ */
+
+/* NOTE: this file must be loaded BEFORE the one about header-btns (overloading order) */
+
+
+:root {
+  --main-color: 87, 147, 240;
+  --main-theme: rgb(var(--main-color));
+  --gutter-theme: transparent;
+  --background-theme: transparent;
+  --code-outline-color: #959595;
+}
+
+/* footer */
+.md-copyright{
+  width: 100%;
+  line-height: unset;
+}
+.md-copyright_pyodide {
+  display:flex
+}
+.md-copyright_pyodide p {
+  margin: 0;
+}
+#pyodide-footer {
+  margin-left: auto;
+}
+.md-social_pyodide {
+  display:block;
+  justify-content: left;
+}
+.md-social {
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
+}
+
+
+.md-typeset code,
+.md-typeset pre code,
+.md-typeset .linenos {
+  background-color: var(--background-theme);    /* Override main.css value*/
+  border-radius: 0.2em;
+  box-shadow: 0px 0px 1px var(--code-outline-color);
+  font-size: 0.94em;
+  padding: 0 0.3em;
+  word-break: break-word;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* Override */
+.md-typeset div.highlight code,
+.md-typeset div.highlight pre code,
+.md-typeset div.highlight .linenos {
+  box-shadow:none;
+}
+
+[dir="ltr"] .md-header__source {
+  margin-left: 0;
+}
+
+
+/* Formate "Remarques:" dans l'admonition des solutions comme si c'était un h3,
+mais sans lien dessus */
+.md-typeset .rem_fake_h3 {
+  font-size: 1.25em;
+  letter-spacing: -.01em;
+  line-height: 1.5;
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 2.5em;
+}
+
+
+/* Extra CSS for mkdocs-enumerate-headings-plugin */
+.enumerate-headings-plugin {
+  filter: opacity(35%);
+}
+
+
+
+
+/*
+------------------------
+    Tooltips related
+------------------------
+*/
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: var(--main-theme);
+  color: #fff;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 10;
+  top: 110%;
+  font-size: 0.9em;
+  left: 50%;
+  transform: translate(calc(-1 * var(--tool_shift)), 0);    /* root placement. The translation is done from the Html.tooltip function */
+}
+.tooltip .tooltiptext code {
+  color: white;
+}
+
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  /* At the top of the tooltip */
+  left: var(--tool_shift);  /* --tool_shift defined on a parent */
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent var(--main-theme) transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  cursor: pointer;
+  box-shadow: 0 0 4px var(--hover-fg-color);
+}
+
+.tooltip > img {
+  width: 32px;
+  border: 1px solid rgba(85, 119, 196);
+  padding: 3px;
+  border-radius: 9px;
+  background-image: linear-gradient(to bottom, rgb(191, 255, 255), 15%, rgba(var(--main-color), 0.8));
+}
+
+.tooltip:hover>img {
+  text-shadow: 0px 0px rgba(87, 147, 240, 0);
+  position: relative;
+  left: 1px;
+  top: 1px;
+  font-size: 2em;
+  box-shadow: 0px 0px rgba(87, 147, 240, 0);
+}
+
+
+#search-btns-left, #search-btns-right {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

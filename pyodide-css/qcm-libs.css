@@ -1,0 +1,179 @@
+/*
+pyodide-mkdocs-theme
+Copyleft GNU GPLv3 🄯 2024 Frédéric Zinelli
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.
+If not, see <https://www.gnu.org/licenses/>.
+*/
+
+/*
+WARNING:  This file HAS to be loaded before the DOM is built, otherwise
+          the content won't be properly formatted.
+*/
+
+.md-typeset .py_mk_admonition_qcm-inner  {
+  text-align: justify;
+  width: calc( 100% - 4em);
+  margin: 0;
+  position: relative;
+}
+
+
+
+/*
+---------------------------------------
+          Buttons and counter
+---------------------------------------
+*/
+.md-typeset .py_mk_admonition_qcm-inner .qcm_wrapper {
+  display: block;
+  position: absolute;
+  left: 100%;
+  bottom: 0;
+  padding: 0 1em;
+}
+
+.md-typeset .qcm_wrapper .qcm-counter {
+  text-align: center;
+  justify-items: center;
+  width: 100%;
+  color: var(--main-theme);
+  font-size: 1.5em;
+  margin: 0;
+  line-height: 1em;
+}
+
+.md-typeset .hidden .mask-svg {
+  display: flex;
+  justify-content: center;
+  width: 2.5em;
+  margin: 0 3px;
+}
+
+.md-typeset .give-away .mask-svg {
+  display: none;
+}
+
+
+/*
+---------------------------------------
+        Questions and items
+---------------------------------------
+*/
+
+.md-typeset input.qcm {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.py_mk_admonition_qcm-inner >ol>li>ul>li {
+	list-style-type: none;  /* Remove default markers for question items */
+}
+
+.py_mk_admonition_qcm-inner >ol>li>ul>li> label {
+  display: flex;
+  width: 100%;
+  line-height: 1.4;
+
+  /* Forbid text selection: */
+  user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.py_mk_admonition_qcm-inner >ol>li>ul>li> label:hover {
+  box-shadow: 0 0 5px var(--md-primary-fg-color);
+}
+
+/* Handle the automatic margin crap for inner ul/li items */
+.py_mk_admonition_qcm-inner >ol>li>ul>li> label .content {
+  width: calc(100% - 2em);
+}
+.py_mk_admonition_qcm-inner >ol>li>ul>li> label .content > *:first-child,
+.py_mk_admonition_qcm-inner >ol>li>ul>li> label .content > *:first-child > span.filename {
+  margin-top: 0;
+}
+.py_mk_admonition_qcm-inner >ol>li>ul>li> label .content > *:last-child {
+  margin-bottom: 0;
+}
+
+.py_mk_admonition_qcm-inner >ol>li>ul>li> label pre {
+  margin: 0;
+}
+
+
+/*
+---------------------------------------
+          SVGs and ticks
+---------------------------------------
+*/
+/* Define "buttons" basic formatting */
+svg.qcm {
+
+  --svg-size: 1.4em;
+  --circle:none;
+  --square:none;
+  --cross:none;
+  --tick:none;
+  --qcm-border: rgb(131, 131, 131); /* Common */
+  --qcm-light: white;               /* Cross+tick color */
+
+  height: var(--svg-size);
+  min-height: var(--svg-size);
+  min-width: var(--svg-size);
+
+  margin-right: 0.6em;
+  margin-top: -2px;
+
+  opacity: var(--opacity, 1);
+}
+
+.multi svg.qcm {
+  --circle:none;
+  --square:unset;
+}
+.single svg.qcm {
+  --circle:unset;
+  --square:none;
+}
+/* Override variables depending on the class of the parent item node */
+.correct svg.qcm {
+  --qcm-fill: #20A020;
+  --tick:unset;
+}
+.missed svg.qcm {
+  --qcm-fill: red;
+  --tick:unset;
+}
+.incorrect svg.qcm {
+  --qcm-fill: red;
+  --cross:unset;
+}
+.unchecked svg.qcm {
+  --qcm-fill: none;
+}
+.checked svg.qcm {
+  --qcm-fill: var(--md-default-fg-color);
+}
+
+/* Hovering the parent will affect the "buttons" opacity */
+.unchecked:hover, .checked:hover {
+  --opacity: 0.7;
+}

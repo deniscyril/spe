@@ -1,0 +1,187 @@
+/*
+pyodide-mkdocs-theme
+Copyleft GNU GPLv3 🄯 2024 Frédéric Zinelli
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.
+If not, see <https://www.gnu.org/licenses/>.
+*/
+
+/* https://pustelto.com/blog/optimizing-css-for-faster-page-loads/ */
+
+
+
+.py_mk_hidden {
+  display: none;
+}
+
+.py_mk_ide{
+  --py_mk_pad: 3px;
+  min-width: 350px;
+}
+
+
+
+
+/*
+-------------------------
+  Organisation générale
+-------------------------
+*/
+
+
+.py_mk_wrapper, .py_mk_wrapper_v {
+  margin-bottom: 0.5em;   /* before the buttons */
+  border: solid 1px;
+  border-color: var(--main-theme);
+  display: grid;
+}
+.py_mk_wrapper{
+  padding: var(--py_mk_pad) 0;
+  grid-template-rows: repeat(3, auto);
+}
+.py_mk_wrapper_v {
+  padding: 0 var(--py_mk_pad);
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 1fr;
+}
+
+
+.comment_py_mk_wrapper {
+  position: relative;
+}
+
+
+.ide_separator {
+  height: 1px;
+  width: 100%;
+  background-color: var(--main-theme);
+  margin: var(--py_mk_pad) 0;
+}
+.ide_separator_v {
+  height: 100%;
+  width: 1px;
+  background-color: var(--main-theme);
+  margin: 0 var(--py_mk_pad);
+}
+
+
+
+
+/*
+--------------------
+  Tweak ace editor
+--------------------
+*/
+
+.py_mk_ide .ace_editor {
+  font-size: 1.1em;
+  background: var(--background-theme);
+  margin-right: var(--py_mk_pad);      /* enforce the active line to not overlay the round border */
+}
+
+/* Fix the active line color in dark mode */
+.ace-tomorrow-night-bright .ace_marker-layer .ace_active-line {
+  background: #42424242;
+}
+
+/* overloading ace gutters and sliders to hide them behind the navbar or header */
+.ace_gutter, .ace_scrollbar {
+  z-index: 1;
+}
+
+.ace_gutter > .ace_layer {
+  color: var(--main-theme);
+  background-color: var(--gutter-theme);
+  border-right: solid 1px var(--main-theme);
+}
+
+/* global modification of gutters for ace theme */
+div[class*='ace-'] .ace_gutter {
+  background-color: var(--gutter-theme);
+  color: #DEDEDE;
+}
+
+
+.py_mk_ide textarea {    /* WARNING: might not be specific enough... */
+  width: 100%;
+  resize: vertical;
+}
+
+.py_mk_ide textarea:focus {    /* WARNING: might not be specific enough... */
+  outline: none;
+}
+
+
+
+/*
+------------------------
+  Le compteur d'essais
+------------------------
+*/
+
+.ide_buttons_div_wrapper {
+  display: grid;
+  grid-template-columns: max-content auto;
+}
+.ide_buttons_div {
+  z-index: 2;
+}
+
+.compteur_wrapper {
+  justify-self: end;
+  width: 100%;
+  display: grid;
+}
+
+.py_mk_ide .compteur {
+  justify-self: end;
+  position: absolute;
+  float: right;
+  color: var(--main-theme);
+  font-size: 1.2em;
+  width: max-content;
+}
+
+.py_mk_ide .compteur_txt {
+  font-size: 0.8em
+}
+
+
+
+/*
+-------------------------------------------------------------
+  Le "bouton" pour dés-/activer les tests les tests publics
+-------------------------------------------------------------
+*/
+
+.py_mk_ide .comment {
+  --marg-top: calc( var(--py_mk_pad) + 1px );
+  --marg-right: calc( 3 * var(--py_mk_pad) );
+  display: inline-block;
+  font-size: 1em;
+  margin-top: var(--marg-top);
+  margin-right: var(--marg-right);
+  position: absolute;
+  top: -2px;
+  right: 0px;
+  z-index: 8;
+}
+
+.py_mk_ide .comment:hover {
+  cursor: pointer;
+  margin-top: calc( var(--marg-top) + 1px );
+  margin-right: calc( var(--marg-right) - 1px );
+  top: -2px;
+  right: 0px;
+}
